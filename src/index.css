@@ -14,6 +14,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -66,4 +67,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.imagen-producto {
+  width: 5rem;
+  height: 7rem;
+}
+
+.cont-buscador {
+  display: flex;
+  padding: 2rem;
+  align-content: center;
+  gap: 1rem;
+  background-color: #fefae0;
+  width: 100%;
+}
+
+td {
+  align-items: center;
+  align-content: center;
+  background-color: #fefae0;
+}
+
+.cont-elementos {
+  width: 100%;
 }

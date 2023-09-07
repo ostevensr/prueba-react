@@ -75,11 +75,23 @@ function MiApi() {
         );
       setSearchResults(filteredProducts);
       
-      console.log(searchResults);
+      //console.log(searchResults);
 
-      console.log(info)
+    };
 
-    };    
+    //Ordenando resultados alfbéticamente según la categoría del Producto
+    
+    searchResults.sort((a, b) => {
+      const categoryA = a.category.toUpperCase();
+      const categoryB = b.category.toUpperCase();
+      if (categoryA < categoryB) {
+        return -1;
+      }
+      if (categoryA > categoryB) {
+        return 1;
+      }
+      return 0;
+    });
 
     const productos = searchResults.map((producto) => (
       <tr key={producto.id}>
@@ -94,8 +106,10 @@ function MiApi() {
 
   return (
     <>
-    <Buscador onSearch={handleSearch}/>
-    <Table striped bordered hover>
+    <div className='cont-elementos'>
+      <Buscador onSearch={handleSearch}/>
+    <div className='cont-tabla'>
+      <Table striped bordered hover>
       <thead>
         <tr>
           <th>ID</th>
@@ -110,6 +124,8 @@ function MiApi() {
         {productos}
       </tbody>
     </Table>
+    </div>
+    </div>
     </>
     
   );
