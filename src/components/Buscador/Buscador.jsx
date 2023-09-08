@@ -18,7 +18,7 @@ function Buscador({ onSearch }) {
   return (
     <div className='cont-buscador'>
         <h1>Marketplace</h1>
-        <Form.Control value={searchTerm} onChange={handleInputChange} size="lg" type="text" placeholder="Look for your product here" />
+        <Form.Control value={searchTerm} onChange={handleInputChange} size="lg" type="text" placeholder="Look for your product here by title, category or description" />
         <Button onClick={handleSearch} variant="secondary" size="lg">Search</Button>
     </div>
   );
